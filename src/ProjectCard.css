@@ -1,0 +1,77 @@
+.ProjectCard {
+    background-color: #D8EBE8;
+    color: #0D211F;
+    border-radius: .5em;
+    max-width: 400px;
+    text-align: center;
+    overflow: hidden;
+    margin: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.ProjectCard:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.ProjectCardImage {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.ProjectCardImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ProjectCardHeader {
+    margin: 20px;
+    font-size: 2em;
+}
+
+.ProjectCardSkills {
+    margin: 20px;
+    font-size: .8em;
+}
+
+.ProjectCardBody {
+    margin: 20px;
+    font-weight: 400;
+}
+
+.ProjectCardButtons {
+    margin: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ProjectCardMainButton {
+    background-color: #52CCBE;
+    padding: .5em;
+    display: inline-block;
+    border-radius: .2em;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.ProjectCardMainButton:hover {
+    background-color: #52CCBEaa;
+    color: inherit;
+}
+
+.ProjectCardButton {
+    background-color: #52ccbe00;
+    padding: .5em;
+    display: inline-block;
+    border-radius: .2em;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.ProjectCardButton:hover {
+    background-color: #52ccbe44;
+
+}

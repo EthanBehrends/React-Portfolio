@@ -1,0 +1,20 @@
+.ScrollPrompt {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    border-left: 6px solid #D8EBE8;
+    border-bottom: 6px solid #D8EBE8;
+    animation: bounce 3s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(-45deg)
+    }
+    50% {
+        transform: translate(-50%, 0%) rotate(-45deg)
+    }
+}

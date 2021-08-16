@@ -1,0 +1,55 @@
+.sectionCont {
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.sectionBlock {
+    width: 45vw;
+    min-width: 380px;
+    padding: 40px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.sectionFlex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bigBubble {
+    justify-content: space-around;
+}
+
+.bigBubble::before {
+    content: "";
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    opacity: .1;
+    bottom: -300px;
+    right: 30vw;
+    background-color: #0D211F;
+    position: absolute;
+    transform-origin: -55vw -400vh;
+    animation: bubble 180s linear infinite;
+    z-index: 0;
+}
+
+.sectionCont>div:not(.bubbles) {
+    z-index: 1;
+}
+
+@keyframes bubble {
+    0% {
+        transform: rotate(20deg)
+    }
+    100% {
+        transform: rotate(-25deg)
+    }
+}

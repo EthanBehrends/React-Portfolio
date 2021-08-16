@@ -1,0 +1,31 @@
+.SocialLinksCont {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 3.5em;
+    margin-top: 60px;
+}
+
+.headerLinks {
+    position: absolute;
+    bottom: 50px;
+    left: 7.5vw;
+}
+
+@media screen and (max-width: 1000px) {
+    .headerLinks {
+        bottom: 140px;
+        left: 50vw;
+        transform: translateX(-50%);
+    }
+}
+
+.SocialLinksCont svg {
+    cursor: pointer;
+    transition: .2s;
+}
+
+.SocialLinksCont svg:hover {
+    opacity: .5;
+}

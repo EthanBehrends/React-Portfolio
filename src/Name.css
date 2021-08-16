@@ -1,0 +1,32 @@
+.nameCont {
+    text-align: left;
+    color: #D8EBE8;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: 5vw;
+    width: 586px;
+    max-width: 90vw;
+}
+
+.nameName {
+    font-size: 5em;
+    display: inline-block;
+}
+
+.nameTitle {
+    font-size: 2.5em;
+    display: inline-block;
+    position: relative;
+}
+
+.nameCont::after {
+    content: "";
+    height: 5px;
+    position: relative;
+    top: 18px;
+    left: 5px;
+    right: 100%;
+    background-color: #D8EBE8;
+    flex-grow: 1;
+}

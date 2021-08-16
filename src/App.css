@@ -1,38 +1,186 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,600;1,600&display=swap');
+
+.projectArea {
+  position: relative;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #196158;
+}
+
+p {
+  font-size: 1.2em;
+  text-indent: 25px;
+  color: #0D211F;
+}
+
+body {
+  font-weight: 600;
+  font-family: 'Josefin Sans';
+}
+
+#watermark {
+  color: #52CCBE;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 3;
+  opacity: .5;
+}
+
+.centerText {
+  font-size: 1.7em;
+  color: #0D211F;
+  margin: 20px;
+  flex-basis: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bubbles {
+  width: 400px;
+  height: 100vh;
+  position: absolute;
+  top:0;
+  right: 0;
+  z-index: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.bubbles>div {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.bubbles>div>div {
+  border-radius: 50%;
+  background-color: #0D211F;
+  opacity: .1;
+}
+
+.bubone {
+  animation: bubbleCont 3s infinite linear;
+  animation-delay: -8s;
+}
+
+.bubone div {
+  animation: bubbleLat 10s infinite ease-in-out;
+  width: 40px;
+  height: 40px;
+  animation-delay: -4s;
+}
+
+.bubtwo {
+  animation: bubbleCont 5s infinite linear;
+  animation-delay: -5s;
+}
+
+.bubtwo div {
+  animation: bubbleLat 10s infinite ease-in-out;
+
+  width: 75px;
+  height: 75px;
+  animation-delay: -6s;
+}
+
+.bubthree {
+  animation: bubbleCont 6s infinite linear;
+  animation-delay: -2s;
+}
+
+.bubthree div {
+  animation: bubbleLat 10s infinite ease-in-out;
+  width: 60px;
+  height: 60px;
+  animation-delay: -9s;
+}
+
+.bubfour {
+  animation: bubbleCont 5.5s infinite linear;
+  animation-delay: -3s;
+}
+
+.bubfour div {
+  animation: bubbleLat 14s infinite ease-in-out;
+  width: 20px;
+  height: 20px;
+  animation-delay: -1s;
+}
+
+.bubfive {
+  animation: bubbleCont 7s infinite linear;
+  animation-delay: 0s;
+}
+.bubfive div {
+  animation: bubbleLat 10s infinite ease-in-out;
+  width: 90px;
+  height: 90px;
+  animation-delay: 0s;
+}
+
+@keyframes bubbleCont {
+  0% {
+    transform: translate(0,10vh);
+  }
+  100% {
+    transform: translate(0px, -100vh);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@keyframes bubbleLat {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(300px);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  75% {
+    transform: translateX(250px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.hiddenInput {
+  position: absolute;
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.popup {
+  position: absolute;
+  left: 47%;
+  bottom: -70px;
+  width: 80%;
+  padding: 10px;
+  box-sizing: border-box;
+  color: #0D211F;
+  border-radius: .2em;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  background-color: #A3E8E0;
+  text-align: center;
+  opacity: 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.popup::before {
+  content: '';
+  box-sizing: border-box;
+  border-bottom: 10px solid #A3E8E0;
+  border-left: 10px solid #00000000;
+  border-right: 10px solid #00000000;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 20px;
+  height: 20px;
+}
+
+a {
+  color: unset;
 }
